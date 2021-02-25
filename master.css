@@ -1,0 +1,109 @@
+/* body styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #0f2667;
+}
+
+.hero-image {
+  background-image: url("The Doge Runner header.jpg");
+  width: 1200px;
+  height: 569px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#gameContainer{
+  padding-top: 534px;
+}
+
+#footer {
+  position:fixed;
+  bottom:0;
+  padding: 30px;
+  color: white;
+  
+}
+
+
+/* animation and obstacles */
+.game{
+  width: 600px;
+  height: 200px;
+  border-bottom: 3px solid #080808;
+  margin: auto;
+  padding: 20px;
+}
+
+#dino{
+  width: 50px;
+  height: 41px;
+  background-image: url(doge-runner-sprite.png);
+  position: relative;
+  top: 180px;
+}
+
+.jump {
+  animation: jump 0.4s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 179px;
+  }
+
+  30%{
+    top: 120px;
+  }
+
+  50%{
+    top: 80px;
+  }
+
+  80%{
+    top: 120px;
+  }
+
+  100%{
+    top: 179px;
+  }
+}
+
+
+.obstacle1 {
+  width: 20px;
+  height: 25px;
+  position: relative;
+  top : 150px;
+  left: 580px;
+
+  background-image: url("obstacle1.png");
+  animation: block 1s infinite linear;
+}
+
+#score {
+  position: relative;
+  top: 60px;
+  text-align: left;
+  width: 200px;
+  margin: auto;
+  background-color: #fcee05;
+  font-weight: 800;
+  font-color: #33333;
+  padding-left: 22px;
+  padding: 12px;
+  border: 8px solid #080808;
+
+}
+
+@keyframes block {
+  0% {
+    left : 580px;
+  }
+  100% {
+    left : -20px;
+  }
+}
