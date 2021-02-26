@@ -10,7 +10,7 @@ body {
 
 .hero-image {
   background-image: url("The Doge Runner header.jpg");
-  width: 1200px;
+  width: 1200px; /* 1200 et 569 */
   height: 569px;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ body {
 }
 
 #gameContainer{
-  padding-top: 534px;
+  padding-top: 534px; /* 534 */
 }
 
 .instructions{
@@ -93,7 +93,7 @@ body {
   left: 580px;
 
   background-image: url("obstacle1.png");
-  animation: block 1s infinite linear;
+  animation: block 1.3s infinite linear;
 }
 
 #score {

@@ -2,16 +2,14 @@ const dino = document.getElementById("dino");
 const obstacle1 = document.getElementById("gamestart");
 var scoreCount = document.getElementById("scoreCount");
 var counter = 0;
-
-
+var level = 1;
+var soundLevelUp = document.getElementById("audio");
 // Game Start : launch obstacle on key up press
 window.addEventListener("keydown", (start) => {
   if (start.keyCode == 32) {
     obstacle1.classList.add("obstacle1");
     animeScript();
-  }
-  else
-  {
+  } else {
     counter == 0;
     scoreCount.innerHTML = "384400000";
   }
@@ -25,36 +23,51 @@ function jump() {
 
     setTimeout(function() {
       dino.classList.remove("jump")
-    }, 400);
+    }, 280);
+    levelUp();
   }
 }
 
+// LEVEL UP function
+function levelUp() {
+  if (counter > 300) {
+    level = 2;
+
+  }
+}
+
+// Play sound FUNCTIONS
+function playAudio(){
+  soundLevelUp.play();
+}
+
+
 // GAME RULES : die if collision
 let isAlive = setInterval(function() {
-  // get current dino Y position
-  let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+// get current dino Y position
+let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
 
-  // get current obstacle1 X position
-  let obstacle1Left = parseInt(window.getComputedStyle(obstacle1).getPropertyValue("left"));
+// get current obstacle1 X position
+let obstacle1Left = parseInt(window.getComputedStyle(obstacle1).getPropertyValue("left"));
   console.log(obstacle1Left);
 
   // detect colision
-  if (obstacle1Left < 50 && obstacle1Left > 0 && dinoTop >= 140) {
+  if (obstacle1Left < 50 && obstacle1Left > 0 && dinoTop >= 160) {
     // collision
-    alert("game over. " + "Your score is " + Math.floor(counter / 1) +"m run.");
+    playAudio();
+    alert("game over. " + "Your score is " + Math.floor(counter / 1) + "m run.");
     scoreCount.innerHTML = counter;
     obstacle1.classList.remove("obstacle1")
     counter = 0;
     scoreCount.innerHTML = "384400000";
 
   } else {
-    if (obstacle1.classList == "obstacle1")
-    {
+    if (obstacle1.classList == "obstacle1") {
       counter++;
       scoreCount.innerHTML = 384400000 - (Math.floor(counter / 1));
     }
   }
-}, 10);
+}, 40); //20 works well
 
 // Trigger jump on keydown
 document.body.onkeydown = function(e) {
@@ -68,8 +81,7 @@ document.body.onkeydown = function(e) {
 // use this variable to clear the setInterval
 var tID;
 var position = 0;
-var speed = 140;
-const interval = speed;
+var interval = 120;
 
 tID = setInterval(() => {
   document.getElementById("dino").style.backgroundPosition =
@@ -84,7 +96,6 @@ tID = setInterval(() => {
   }
   //reset the position to 256px, once position exceeds 1536px
 }, interval);
-
 
 function animeScript() {
   document.getElementById("dino").style.backgroundPosition = `-50px 0px`;
