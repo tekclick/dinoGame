@@ -24,15 +24,22 @@ body {
 
 .instructions{
   font-size: 14px;
+  color: #b5c0e8;
+}
+
+#instructionsBlock{
+  margin-top: 60px;
+  background-color: rgba(117, 190, 218, 0.1);
+  padding: 20px;
 }
 
 #footer {
   position:fixed;
   bottom:0;
-  padding: 30px;
+  padding: 10px;
+  margin-left: 20px;
   color: white;
 }
-
 
 /* animation and obstacles */
 .game{

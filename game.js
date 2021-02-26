@@ -6,7 +6,7 @@ var counter = 0;
 
 // Game Start : launch obstacle on key up press
 window.addEventListener("keydown", (start) => {
-  if (start.keyCode == 38) {
+  if (start.keyCode == 32) {
     obstacle1.classList.add("obstacle1");
     animeScript();
   }
@@ -68,7 +68,8 @@ document.body.onkeydown = function(e) {
 // use this variable to clear the setInterval
 var tID;
 var position = 0;
-const interval = 140;
+var speed = 140;
+const interval = speed;
 
 tID = setInterval(() => {
   document.getElementById("dino").style.backgroundPosition =
