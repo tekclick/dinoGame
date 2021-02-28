@@ -25,7 +25,7 @@ body {
 #title{
   font-size: 24px;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #title2{
@@ -34,7 +34,7 @@ body {
 
 #textOverlay{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -45,13 +45,50 @@ body {
 }
 
 #exitOverlay{
-  font-size: 12px; 
+  font-size: 12px;
+}
+
+#gameOverOverlay{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#replayBtn{
+  display: inline-block;
+  font-family: 'DotGothic16', sans-serif;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  font-weight: 600;
+  background-color: #fcee05;
+  border: none;
+  border-top: 4px solid #d60000;
+  border-left: 4px solid #d60000;
+}
+
+#exitOverlay{
+  font-size: 12px;
 }
 
 .hero-image {
   background-image: url("The Doge Runner.jpg");
-  width: 1200px; /* 1200 et 569 */
-  height: 369px;
+  width: 100%;
+  height: 370px;
+  margin: auto;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

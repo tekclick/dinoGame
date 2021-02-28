@@ -15,8 +15,17 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
+function gameOverOn() {
+  document.getElementById("gameOverOverlay").style.display = "block";
+}
+
+function gameOverOff() {
+  document.getElementById("gameOverOverlay").style.display = "none";
+}
+
 window.onload = function() {
   on();
+  gameOverOff();
 };
 
 // Game Start : launch obstacle on key up press
@@ -90,7 +99,8 @@ let obstacle1Left = parseInt(window.getComputedStyle(obstacle1).getPropertyValue
   // detect colision
   if (obstacle1Left < 50 && obstacle1Left > 0 && dinoTop >= 160) {
     // collision
-    alert("game over. " + "Your score is " + Math.floor(counter / 1) + "m run.");
+    //alert("game over. " + "Your score is " + Math.floor(counter / 1) + "m run.");
+    gameOverOn();
     scoreCount.innerHTML = counter;
     obstacle1.classList.remove("obstacle1");
     document.getElementById("gamestart").style.animationDuration = "1.3s";
