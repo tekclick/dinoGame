@@ -25,7 +25,6 @@ function gameOverOff() {
 
 window.onload = function() {
   on();
-  gameOverOff();
 };
 
 // Game Start : launch obstacle on key up press
