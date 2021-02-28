@@ -8,6 +8,46 @@ body {
   background-color: #0f2667;
 }
 
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#title{
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#title2{
+  font-size: 20px;
+}
+
+#textOverlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#exitOverlay{
+  font-size: 12px; 
+}
+
 .hero-image {
   background-image: url("The Doge Runner.jpg");
   width: 1200px; /* 1200 et 569 */
@@ -25,12 +65,16 @@ body {
 .instructions{
   font-size: 14px;
   color: #b5c0e8;
+  text-align: left;
 }
 
 #instructionsBlock{
+  text-align: center;
+  margin: auto;
   margin-top: 60px;
-  background-color: rgba(117, 190, 218, 0.1);
+  background-color: rgba(117, 190, 218, 0.3);
   padding: 20px;
+  width: 300px;
 }
 
 #footer {

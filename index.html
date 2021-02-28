@@ -15,6 +15,18 @@
 </head>
 
 <body>
+  <div id="overlay" onclick="off()">
+    <div id="textOverlay">Welcome to The Doge Runner
+      <h1 id="title">Take Doge to the Moon! Here are the rules:</h1>
+      <div id="instructionsBlock">
+        <p class="instructions">Dodge the Bitcoins. </p>
+        <p class="instructions">Press Spacebar to start the game</p>
+        <p class="instructions">Press ⬆ to jump</p>
+        <p class="instructions">Press ⬇ to crawl</p>
+      </div>
+      <p id="exitOverlay">Click anywhere to exit instructions</p>
+    </div>
+  </div>
 
   <div class="hero-image">
 
@@ -37,7 +49,7 @@
 
   <div id="footer">
     <p>Distance to the Moon <span id="scoreCount">384400000</span>m </p>
-    <p>Leaderboard   - Take Doge to the moon - Created with Love</p>
+    <p>Leaderboard - Take Doge to the moon - Created with Love</p>
   </div>
 
   <audio id="audio" src="stonks.mp3"></audio>
@@ -45,7 +57,7 @@
 
   <script src="game.js"></script>
 
-<!--p>
+  <!--p>
   // Thank you for stoping by, I hope you enjoyed this !
   ............................................................
   //////////((((((((((/////////**////////*,///////////////////

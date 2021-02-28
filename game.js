@@ -6,6 +6,19 @@ var speed = 1;
 var soundLevelUp = document.getElementById("audio");
 var soundSlide = document.getElementById("audio2");
 
+// Overlay Game Start
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+window.onload = function() {
+  on();
+};
+
 // Game Start : launch obstacle on key up press
 window.addEventListener("keydown", (start) => {
   if (start.keyCode == 32) {
@@ -49,7 +62,7 @@ document.body.onkeyup = function(n){
 
 var obstacle1LeftPosition = parseInt(window.getComputedStyle(obstacle1).getPropertyValue("left"));
 function levelUp() {
-  if (counter > 100) {
+  if (counter > 100 && obstacle1LeftPosition < 40) {
     document.getElementById("gamestart").style.animationDuration = "0.8s";
     console.log("level calculation");
   }
@@ -60,10 +73,10 @@ function levelUp() {
 function playAudio(){
   soundLevelUp.play();
 }
-
 function playSlide(){
   soundSlide.play();
 }
+
 
 // GAME RULES : die if collision
 let isAlive = setInterval(function() {
