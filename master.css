@@ -9,9 +9,9 @@ body {
 }
 
 .hero-image {
-  background-image: url("The Doge Runner header.jpg");
+  background-image: url("The Doge Runner.jpg");
   width: 1200px; /* 1200 et 569 */
-  height: 569px;
+  height: 369px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +19,7 @@ body {
 }
 
 #gameContainer{
-  padding-top: 534px; /* 534 */
+  padding-top: 300px; /* 534 */
 }
 
 .instructions{
@@ -58,6 +58,14 @@ body {
   top: 180px;
 }
 
+.slide {
+  width: 50px !important;
+  height: 24px !important;
+  background-image: url(slidingdoge.png) !important;
+  position: relative !important;
+  top: 198px !important;
+}
+
 .jump {
   animation: jump 0.3s linear;
 }
@@ -91,10 +99,11 @@ body {
   position: relative;
   top : 150px;
   left: 580px;
-
   background-image: url("obstacle1.png");
   animation: block 1.3s infinite linear;
 }
+
+
 
 #score {
   position: relative;
